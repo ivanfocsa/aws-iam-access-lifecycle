@@ -1,0 +1,16 @@
+name: lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  policy-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run local IAM policy checks
+        shell: pwsh
+        run: ./scripts/Test-IamPolicies.ps1 -PolicyPath ./policies
+

@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "SecurityEvidenceRead",
+      "Effect": "Allow",
+      "Action": [
+        "access-analyzer:ListAnalyzers",
+        "access-analyzer:ListFindings",
+        "cloudtrail:LookupEvents",
+        "config:Describe*",
+        "config:Get*",
+        "guardduty:Get*",
+        "guardduty:List*",
+        "iam:GenerateCredentialReport",
+        "iam:Get*",
+        "iam:List*",
+        "securityhub:GetFindings",
+        "securityhub:Describe*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
