@@ -1,13 +1,13 @@
 ![AWS IAM access lifecycle](assets/banner.svg)
 
-# AWS IAM Access Lifecycle
+# AWS IAM Security
 
 [![IAM](https://img.shields.io/badge/AWS-IAM-ff9900)](#)
 [![Least privilege](https://img.shields.io/badge/model-least%20privilege-16a34a)](#)
-[![Access Analyzer](https://img.shields.io/badge/review-Access%20Analyzer-2563eb)](#)
+[![Access lifecycle](https://img.shields.io/badge/access-lifecycle-2563eb)](#)
 [![PowerShell](https://img.shields.io/badge/scripts-PowerShell-7c3aed)](#)
 
-This project models a practical AWS IAM access lifecycle: onboarding, tiering, least-privilege boundaries, review and offboarding. It is intentionally small enough to read in one sitting and concrete enough to discuss in a technical interview.
+This project models AWS IAM security through access lifecycle management, tiering and the principle of least privilege. It is intentionally small enough to read in one sitting and concrete enough to discuss in a technical interview.
 
 ## What this project demonstrates
 
@@ -59,14 +59,14 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 ./scripts/Test-IamPolicies.ps1 -PolicyPath ./policies
 ```
 
-The script is not a replacement for IAM Access Analyzer. It catches the obvious mistakes before policies reach AWS: broad actions, broad resources and missing conditions around sensitive services.
+The script is not a replacement for IAM Access Analyzer. It catches obvious mistakes before policies reach AWS: broad actions, broad resources and missing conditions around sensitive services.
 
 ## Interview talking points
 
 - Why a permissions boundary does not grant access by itself.
 - How identity-based policies and boundaries intersect.
 - Why human access should use federation and temporary credentials.
-- How to move from AWS managed policies to generated least-privilege policies using CloudTrail evidence.
+- How tiering supports lifecycle management and least privilege.
 
 ## References
 
